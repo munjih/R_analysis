@@ -1,0 +1,31 @@
+MechaCar prototype analysis
+
+- Multiple linear regression analysis
+Correlation analysis was performed in order to determine the statistical relationship between several variables and mpg.
+
+Results suggested that mpg had moderate correlation with vehicle length and weak correlation with ground clearance. 
+The other variables, such as vehicle weight, spoiler angle and AWD show none or very weak correlation with mpg.
+
+Linear regression analysis was performed for the two variables, vehicle length and ground clearance, which showed a non-random amount of variance to the mpg values in the dataset.
+
+The R-squared value for the linear regression model of vehicle length and mpg is 0.3715, with a p-value of 2.632e-06 indicating that about 37% of mpg predictions will be correct using this model. The p-value is smaller than our significance level of 0.05%, which indicates that we can reject our null hypothesis; thus the slope of our linear model is not zero. 
+
+The R-squared value for the linear regression model of ground clearance and mpg is 0.1081, with a p-value of 0.01975. The R-squared value suggests only roughly 11% of mpg predictions will be correct with this model. The p-value is still smaller than our significance level of 0.05%; thus the slope of our linear model is not zero.
+
+Finally, multiple linear regression model was developed including all variables. The R-squared value increased to 0.7149 with a p-value of 5.35e-11. This model can correctly predict roughly 71% of mpg predictions, which is certainly better than the individual linear regression models shown above. The p-value is also smaller than our significance level of 0.05%, thus we can claim that the slope of our linear model is not zero. 
+
+
+- Suspension coil summary
+MechaCar suspension coil test results were analyzed. The mean of the pounds-per-inch is 1498.78 and the median is 1500. The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per inch. Our analysis show that the variance is 62.29356, thus the data meet the design specification for the MechaCar suspension coils.
+
+- Suspension coil t-test
+One-sample t-test was used to determine if the suspension coil's pound-per-inch results are statistically different from the mean population results of 1500 pounds per inch. The p-value is 0.06028, which is above our significance level of 0.05%, thus we do not have sufficient evidence to reject the null hypothesis. The data shown is not statistically different from the mean population of 1500 pounds per inch. 
+
+- Further studies
+We can compare the MechaCar prototype vehicle to other comparable vehicles on the market using metrics such as selling price and fuel efficiency. 
+<Questions>
+1. What is the competitive cost range? 
+Using simple linear regression analysis of sales number and selling price on comparable vehicles, we can predict the competitive selling price range for MechaCar.
+2. Is MechaCar more fuel efficient compared to comparable vehicles?
+We will need the mpg data for comparable vehicles. Using t-test, we will be able to test if MechaCar's fuel efficiency in statistically different from the comparable vehicles.
+
